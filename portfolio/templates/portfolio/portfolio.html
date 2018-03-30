@@ -26,7 +26,8 @@
     </nav>
     <div class="row">
       <div class="col-md-1">
-        <img src=/media/sarbesh/common/ps/kgec_logo.png style="margin-top:5px;margin-left:5px;margin-right: 15px" height="100px" width="100px" />
+        {% load static %}
+        <img src="{% static "portfolio/images/kgec_logo.png" %}" alt="kgec_logo image" style="margin-top:5px;margin-left:5px;margin-right: 15px" height="100px" width="100px" />
       </div>
       <div class="col-md-10">
         <div class="panel panel-info">
@@ -141,7 +142,7 @@
                     <a href="#" class="list-group-item">Attended <b>Hackmania</b> workshop organized by National Institue for Industrial Training</a>
                     <a href="#cisco" data-toggle="collapse" class="list-group-item">Completed many cources from <b>Cisco netacad.com</b></a>
                     <table class="">
-                      
+
                     </table>
                   </div>
                 </div>
@@ -157,7 +158,7 @@
            </div>
         </div>
       </div>
-  
+
       <div class="col-md-1"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
