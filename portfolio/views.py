@@ -5,5 +5,5 @@ from django.http import HttpResponse
 def index(request):
     return render(request,'portfolio/base.html')
 
-def hello(request):
-    return HttpResponse("<h1>This is my portfolio page</h1>")
+def sarbesh(request):
+    return render(request,'portfolio/portfolio.html')
