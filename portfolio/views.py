@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from portfolio.models import Name
 
 # Create your views here.
-def index(request, id):
+def index(request):
     context={}
     return render(request,'portfolio/base.html')
 

@@ -4,10 +4,10 @@
 <head>
   <title> Resume Generator | {% block title%}{%endblock title %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static "portfolio/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "portfolio/css/font-awesome.min.css" %}">
+ <!-- <script src="{% static "portfolio/js/jquery.min.js" %}"></script>
+  <script src="{% static "portfolio/js/bootstrap.min.js" %}"></script> -->
   {%block style%}
   {%endblock %}
 </head>
@@ -21,7 +21,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Generate CV</a></li>
+      <li><a href="/blog">blogs</a></li>
       <li><a href="/portfolio">portfolio</a></li>
       <li><a href="/polls">Polls</a></li>
     </ul>
@@ -41,9 +41,9 @@
 {% endblock %}
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{% static "portfolio/js/jquery.min.js" %}"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="{% static "portfolio/js/bootstrap.min.js" %}"></script>
 </body>
 </html>

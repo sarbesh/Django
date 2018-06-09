@@ -13,4 +13,5 @@
 </p>
 {{ post.body|truncatewords:30|linebreaks }}
 {% endfor %}
+<!--{% include "blog/paginator.html" with page=posts %}--><!-- added PostListView method in urls.py -->
 {% endblock %}
