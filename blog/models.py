@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 from django.utils import timezone
 from django.contrib.auth.models import User
-from django.urls import reverse
 
 
 class PublishedManager(models.Manager):
@@ -34,4 +33,7 @@ class Post(models.Model):
         return self.title
     
     def get_absolute_url(self):
-        return reverse('blog:post_detail',args=[self.publish.year, self.publish.strftime('%m'), self.publish.strftime('%d'),self.slug])
+        from django.urls import reverse
+        #return reverse('blog:post_details',args=[self.publish.year, self.publish.strftime('%m'), self.publish.strftime('%d'),self.slug])
+        return reverse('post_details',args=[self.publish.year, self.publish.strftime('%m'), self.publish.strftime('%d'),self.slug])
+        #for app_name = "blog in urls.py the app will be registered as blog which can be used in reverse('blog:____')" :- this is registering the app
