@@ -5,7 +5,7 @@ from django.utils import timezone
 # Create your models here.
 class Name(models.Model):
 #    question_text = models.CharField(max_length=200)
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     First_name = models.CharField(max_length=100, default='')
     Middle_name = models.CharField(max_length=100, default='')
     Last_name = models.CharField(max_length=100, default='')
