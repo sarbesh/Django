@@ -1,3 +1,4 @@
+{% load blog_tags %}
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
@@ -5,20 +6,53 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% block title %}{% endblock %}</title>
-    <link href="{% static "css/blog.css" %}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="{% static "portfolio/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "portfolio/css/font-awesome.min.css" %}">
+    <link href="{% static "css/blog.css" %}" rel="stylesheet" type="text/css" media="screen" />
+    <link href="{% static "css/materialize.css" %}" rel="stylesheet" type="text/css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% static "blog/js/main.js" %}"></script>
 </head>
 <body>
-    <div id = "content">
-        {% block content %}
-        {% endblock %}
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Django Devlopment</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="">blogs</a></li>
+            <li><a href="/portfolio">portfolio</a></li>
+            <li><a href="/polls">Polls</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="/admin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
     </div>
-    <div id ="slidebar">
-        <h2>My Blog</h2>
-        <p>This is my Blog</p>
-    </div>
-    
+</nav>
+<div  class="container row" id ="content" >
+    {% block content %}
+    {% endblock %}
+</div>
+<div id ="sidebar" class="card-panel gray lighten-3">
+    <span class="blue-text text-darken-3"><h4><a href="/portfolio/my">Sarbesh Blogs</a></h4></span>
+    <p>This is my dev Blog site. I've written {% total_posts %} posts so far.</p>
+    <h5>Latest posts</h5>
+    <hr>
+    {% show_latest_posts 3 %}
+    <h5>Most commented posts</h5>
+    <hr>
+    {% get_most_commented_posts as most_commented_posts %}
+    <ul>
+        {% for post in most_commented_posts %}
+        <li>
+            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
 </body>
 </html>

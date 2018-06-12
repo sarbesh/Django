@@ -7,5 +7,8 @@ def index(request):
     context={}
     return render(request,'portfolio/base.html')
 
+def my(request):
+	return render(request,'portfolio/my.html')
+
 def sarbesh(request):
     return render(request,'portfolio/portfolio.html')

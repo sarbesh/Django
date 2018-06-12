@@ -21,5 +21,5 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('portfolio/', include('portfolio.urls')),
     #path('', include('portfolio.urls')),
-    path('blog/',include('blog.urls')),
+    path('',include('blog.urls')),
 ]

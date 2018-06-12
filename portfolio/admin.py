@@ -4,4 +4,7 @@ from django.contrib import admin
 
 from .models import Name
 
-admin.site.register(Name)
+class PortfolioAdmin(admin.ModelAdmin):
+    list_display = ('Email','First_name','Last_name','Middle_name')
+    search_fields = ('Email','First_name','Last_name')
+admin.site.register(Name, PortfolioAdmin)

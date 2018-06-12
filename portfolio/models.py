@@ -2,6 +2,8 @@ from django.db import models
 import datetime
 from django.utils import timezone
 
+#class PortfolioManager(models.Manager):
+
 # Create your models here.
 class Name(models.Model):
 #    question_text = models.CharField(max_length=200)
@@ -17,5 +19,6 @@ class Name(models.Model):
     phone = models.IntegerField()
     linkedin = models.URLField(max_length=100, blank = True)
     github = models.URLField(max_length=100, blank = True)
-    def __str__(self):
-        return "{}, {}".format(self.id, self.Email)
+
+    #def __str__(self):
+    #    return "{}, {}".format(self.id, self.Email)

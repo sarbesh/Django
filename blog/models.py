@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 from django.utils import timezone
 from django.contrib.auth.models import User
+from taggit.managers import TaggableManager
 
 
 class PublishedManager(models.Manager):
@@ -25,15 +26,31 @@ class Post(models.Model):
     status = models.CharField(max_length=10, choices = STATUS_CHOICES, default = 'Draft')
     #object = models.Manager #Default manager
     published = PublishedManager() #custom manager
+    tags = TaggableManager()
     
     class Meta:
         ordering = ('-publish',)
 
-    def __str__(self):
-        return self.title
+    #def __str__(self):
+    #    return self.title
     
     def get_absolute_url(self):
         from django.urls import reverse
-        #return reverse('blog:post_details',args=[self.publish.year, self.publish.strftime('%m'), self.publish.strftime('%d'),self.slug])
-        return reverse('post_details',args=[self.publish.year, self.publish.strftime('%m'), self.publish.strftime('%d'),self.slug])
+        return reverse('blog:post_details',args=[self.publish.year, self.publish.strftime('%m'), self.publish.strftime('%d'),self.slug])
+        #return reverse('post_details',args=[self.publish.year, self.publish.strftime('%m'), self.publish.strftime('%d'),self.slug])
         #for app_name = "blog in urls.py the app will be registered as blog which can be used in reverse('blog:____')" :- this is registering the app
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
+    name = models.CharField(max_length=25)
+    email = models.EmailField()
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ('created',)
+    
+    def __str__():
+        return 'Comment by {} on {}'.format(self.name, self.post)
