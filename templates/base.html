@@ -1,11 +1,19 @@
+{% load blog_tags %}
 {% load static %}
+{% load staticfiles %}
 <!DOCTYPE HTML>
 <html>
 <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> Resume Generator | {% block title%}{%endblock title %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{% static "portfolio/css/bootstrap.min.css" %}">
   <link rel="stylesheet" href="{% static "portfolio/css/font-awesome.min.css" %}">
+  <link href="{% static "css/blog.css" %}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{% static "css/materialize.css" %}" rel="stylesheet" type="text/css" media="screen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="{% static "blog/js/main.js" %}"></script>
   {%block style%}
   {%endblock %}
 </head>
@@ -15,11 +23,11 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Resume Generator</a>
+        <a class="navbar-brand" href="#">Django Devlopment</a>
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="/blog">blogs</a></li>
+        <li><a href="/blogs">blogs</a></li>
         <li><a href="/portfolio">portfolio</a></li>
         <li><a href="/polls">Polls</a></li>
       </ul>
@@ -32,23 +40,6 @@
   {% block body %}
 
   {% endblock %}
-</div>
-<div id ="sidebar" class="card-panel gray lighten-3">
-  <span class="blue-text text-darken-3"><h4><a href="/portfolio/my">Sarbesh Blogs</a></h4></span>
-  <p>This is my dev Blog site. I've written {% total_posts %} posts so far.</p>
-  <h5>Latest posts</h5>
-  <hr>
-  {% show_latest_posts 3 %}
-  <h5>Most commented posts</h5>
-  <hr>
-  {% get_most_commented_posts as most_commented_posts %}
-  <ul>
-    {% for post in most_commented_posts %}
-    <li>
-      <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
-  </ul>
 </div>
 
 
