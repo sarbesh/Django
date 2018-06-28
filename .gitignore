@@ -26,6 +26,7 @@ datadump.json
 #Folders
 /migrations/*
 */migrations/*
+*/__pycache__/*
 
 # Environments
 .env
