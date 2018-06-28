@@ -25,6 +25,7 @@ datadump.json
 
 #Folders
 /migrations/*
+*/migrations/*
 
 # Environments
 .env
@@ -36,3 +37,5 @@ ENV/
 env.bak/
 venv.bak/
 db.sqlite3
+db.*
+*.sqlite3
