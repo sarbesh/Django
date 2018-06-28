@@ -1,0 +1,50 @@
+{% load blog_tags %}
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Resume Generator | {% block title%}{%endblock title %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static "portfolio/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "portfolio/css/font-awesome.min.css" %}">
+  <link href="{% static "css/blog.css" %}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{% static "css/materialize.css" %}" rel="stylesheet" type="text/css" media="screen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="{% static "blog/js/main.js" %}"></script>
+  {%block style%}
+  {%endblock %}
+</head>
+<body>
+  {% block preloader %}
+  {% endblock %}
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Django Devlopment</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="/blogs">blogs</a></li>
+        <li><a href="/portfolio">portfolio</a></li>
+        <li><a href="/polls">Polls</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/admin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  {% block body %}
+
+  {% endblock %}
+</div>
+
+
+<!-- Latest compiled JavaScript -->
+<script src="{% static "portfolio/js/bootstrap.min.js" %}"></script>
+<script src="{% static "portfolio/js/jquery.min.js" %}"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tr",
+				"trgplc"
+			],
+			[
+				"t",
+				"td\tTag"
+			],
+			[
+				"li",
+				"list-group-item"
+			],
+			[
+				"bt",
+				"btn"
+			],
+			[
+				"h",
+				"h4\tTag"
+			],
+			[
+				"btn",
+				"btn-info"
+			],
+			[
+				"marg",
+				"margin-right"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "from django.db import models\n\n# Create your models here.\nclass Name(models.Model):\n#    question_text = models.CharField(max_length=200)\n    Email = models.EmailField(default=\"\", max_length=250, editable=False, primary_key=True)\n    User = models.CharField(max_length=250)\n    College = models.CharField(max_length=250)\n    DOB = models.DateTimeField('Birth date')\n    Photo =StdImage(max_length=1000)\n    phone = models.IntegerField()\n    linkedin = models.URLField(max_length=100)\n    github = models.URLField(max_length=100)\n",
+			"file": "portfolio/models.py",
+			"file_size": 520,
+			"file_write_time": 131668874017549616,
+			"settings":
+			{
+				"buffer_size": 528,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/sarbesh/Web/Django/mysite",
+		"/home/sarbesh/Web/Django/mysite/portfolio"
+	],
+	"file_history":
+	[
+		"/home/sarbesh/Web/Django/kgecweb/contact/views.py",
+		"/home/sarbesh/Web/Django/kgecweb/contact/urls.py",
+		"/home/sarbesh/Web/Django/kgecweb/trplc/views.py",
+		"/home/sarbesh/Web/Django/kgecweb/trplc/urls.py",
+		"/home/sarbesh/Web/Django/kgecweb/templates/base/base.html",
+		"/home/sarbesh/Web/Django/kgecweb/administration/views.py",
+		"/home/sarbesh/Web/Django/kgecweb/club/models.py",
+		"/home/sarbesh/Web/Django/kgecweb/templates/page/page.html",
+		"/home/sarbesh/Web/Django/kgecweb/page/views.py",
+		"/home/sarbesh/Web/Django/kgecweb/administration/models.py",
+		"/home/sarbesh/Web/Django/kgecweb/kgecweb/settings/production.py",
+		"/home/sarbesh/Web/Django/kgecweb/kgecweb/settings/devlopment.py",
+		"/home/sarbesh/Web/Django/kgecweb/kgecweb/kgecweb.sqlite3",
+		"/home/sarbesh/Web/Django/kgecweb/Procfile",
+		"/home/sarbesh/Web/Django/kgecweb/README.md",
+		"/home/sarbesh/Web/Django/kgecweb/Vagrantfile",
+		"/home/sarbesh/Web/Django/kgecweb/_config.yml",
+		"/home/sarbesh/Web/Django/kgecweb/page/admin.py",
+		"/home/sarbesh/Web/Django/kgecweb/manage.py",
+		"/home/sarbesh/Web/Django/kgecweb/templates/homepage/homepage.html",
+		"/home/sarbesh/Web/kgecweb/requirements.txt",
+		"/home/sarbesh/Web/kgecweb/prepare.sh",
+		"/home/sarbesh/Web/kgecweb/start.sh",
+		"/home/sarbesh/java/Xyz.java",
+		"/home/sarbesh/java/Single.java",
+		"/home/sarbesh/java/multipleinterface.java",
+		"/home/sarbesh/java/main.java",
+		"/home/sarbesh/java/Gcd.java"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "portfolio/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								384,
+								384
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "mysite.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

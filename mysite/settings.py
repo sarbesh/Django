@@ -27,18 +27,23 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
 
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
-    'portfolio.apps.PortfolioConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls.apps.PollsConfig',
+    'portfolio.apps.PortfolioConfig',
+    'blog.apps.BlogConfig',
+    'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +61,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -107,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -120,3 +125,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "../static"),)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
+MEDIA_URL = '/media/'
+
+# email service type:"python -m smtpd -n -c DebuggingServer localhost:1025" for mail server
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+if DEBUG:
+    EMAIL_HOST='localhost'  #'smtp.gmail.com'
+    EMAIL_PORT=1025         #587
+    EMAIL_HOST_USER=''      #'your_account@gmail.com'
+    EMAIL_HOST_PASSWORD=''  #'your_password'
+    EMAIL_USE_TLS=False     #True
+    DEFAULT_FFROM_EMAIL='django.localhost@localhost'
